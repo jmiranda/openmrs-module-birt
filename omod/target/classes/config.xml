@@ -3,16 +3,16 @@
 <module configVersion="1.2">
 
 	<!-- Module Properties -->
-	<id>${project.parent.artifactId}</id>
-	<name>${project.parent.name}</name>
-	<version>${project.parent.version}</version>
-	<package>${project.parent.groupId}.${project.parent.artifactId}</package>
+	<id>birt</id>
+	<name>Eclipse BIRT Module</name>
+	<version>1.0-SNAPSHOT</version>
+	<package>org.openmrs.module.birt</package>
 	<author>jmiranda</author>
 	<description>
-		${project.parent.description}
+		Helps to start writing OpenMRS modules
 	</description>
-	<updateURL>https://modules.openmrs.org/modules/download/${project.parent.artifactId}/update.rdf</updateURL>
-	<require_version>${openMRSVersion}</require_version>
+	<updateURL>https://modules.openmrs.org/modules/download/birt/update.rdf</updateURL>
+	<require_version>1.8.2</require_version>
 	<!-- / Module Properties -->
 
 	
@@ -27,13 +27,13 @@
 	<!-- / Required Modules -->
 	
 	<!-- Module Activator -->
-	<activator>${project.parent.groupId}.${project.parent.artifactId}.BirtActivator</activator>
+	<activator>org.openmrs.module.birt.BirtActivator</activator>
 	
 	
 	<!-- Adds link to admin page -->
 	<extension>
 		<point>org.openmrs.admin.list</point>
-		<class>${project.parent.groupId}.${project.parent.artifactId}.extension.html.AdminList</class>
+		<class>org.openmrs.module.birt.extension.html.AdminList</class>
 	</extension>
 	
 	<!-- Maps hibernate file's, if present -->
@@ -44,7 +44,7 @@
 	</mappingFiles>
 
 	<!-- Internationalization -->
-	<!-- All message codes should start with ${project.parent.artifactId}. -->
+	<!-- All message codes should start with birt. -->
 	<messages>
 		<lang>en</lang>
 		<file>messages.properties</file>
